@@ -2,18 +2,39 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        <title>{% block title %}Gestion de cabinet!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/main-color.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap-grid.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/invoice.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/icons.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/plugins/revolutionslider.css')}}">
     </head>
     <body>
+    <div id="wrapper">
         {% block body %}{% endblock %}
+
+        
+        <script type="text/javascript" src="{{ asset('scripts/jquery-3.6.0.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/jquery-ui.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/leaflet-listeo.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/jquery-migrate-3.3.2.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/mmenu.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/typed.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/leaflet-gesture-handling.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/switcher.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/chosen.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/custom.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/infobox.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/slick.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/rangeslider.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/magnific-popup.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/waypoints.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/counterup.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('scripts/tooltips.min.js')}}"></script>
+        
+        {% block javascripts %}{% endblock %}
+    <div>    
     </body>
 </html>
